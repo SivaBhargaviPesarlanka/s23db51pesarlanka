@@ -1,0 +1,13 @@
+extends layout
+
+block content
+  h1= title
+  p This is Siva Bhargavi Pesarlanka #{title}
+  - var images_names = ['Dog.jpg',"Cat.jpg",'Horse.jpg','Tiger.jpg','Bear.jpg']
+  - var i =0;
+  - while(i<3){
+     - var rand = Math.floor(Math.random()*5)
+     - var img = "/images/"+images_names[rand]
+     - i++
+     img(src=img,  height="300px",width="300px",alt="alt") 
+  -}

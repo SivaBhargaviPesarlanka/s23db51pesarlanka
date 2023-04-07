@@ -1,0 +1,45 @@
+extends layout
+
+block content
+  -
+   let results =[
+      {
+        "animal_Name": "Dog",
+        "animal_breed": "dauberman",
+        "animal_cost": 100
+      },
+      {
+        "animal_Name": "Cat",
+        "animal_breed": "alex",
+        "animal_cost": 150
+      },
+      {
+        "animal_Name": "Horse",
+        "animal_breed": "Arew",
+        "animal_cost": 200
+      },
+      {
+        "animal_Name": "Tiger",
+        "animal_breed": "Neran",
+        "animal_cost": 300
+      },
+      {
+        "animal_Name": "Bear",
+        "animal_breed": "Tereen",
+        "animal_cost": 400
+      }
+    ]
+  h1= title
+  .container-fluid 
+    .row 
+    
+      each animal in results
+        div(class="col-sm-2" style=`border:solid 2px black` onclick=`buy(${results.indexOf(animal)})`) 
+          each value,key in animal 
+            = key + " : " + value
+            br
+  script.
+    function buy(index) {
+        alert("You Purchased item "+(index+1))
+    }
+  

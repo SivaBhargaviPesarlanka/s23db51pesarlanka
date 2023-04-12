@@ -8,12 +8,12 @@ exports.animal_detail = function(req, res) {
 res.send('NOT IMPLEMENTED: Costume detail: ' + req.params.id);
 };
 // Handle Costume create on POST.
-/*exports.animal_create_post = function(req, res) {
+exports.animal_create_post = function(req, res) {
 res.send('NOT IMPLEMENTED: Costume create POST');
-};*/
+};
 
 // Handle Costume create on POST.
-exports.animal_create_post = async function(req, res) {
+/*exports.animal_create_post = async function(req, res) {
     console.log(req.body)
     let document = new animal();
     // We are looking for a body, since POST does not have query parameters.
@@ -32,6 +32,7 @@ exports.animal_create_post = async function(req, res) {
     res.send(`{"error": ${err}}`);
     }
     };
+    */
     
 
 // Handle Costume delete form on DELETE.

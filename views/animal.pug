@@ -7,11 +7,11 @@ block content
   .container-fluid 
     .row 
     
-      each animal in results
-        div(class="col-sm-2" style=`border:solid 2px black` onclick=`buy(${results.indexOf(animal)})`) 
-          each value,key in animal 
-            = key + " : " + value
-            br
+      each anima in results
+        div(class="col-sm-2" style=`border:solid 2px black` onclick=`buy(${animal.indexOf(anima)})`) 
+            p animal_Name : #{anima.animal_Name}
+            p animal_breed : #{anima.animal_breed}
+            p animal_cost : #{anima.animal_cost}
   
   script.
     function buy(index) {

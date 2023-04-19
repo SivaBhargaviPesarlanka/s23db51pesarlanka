@@ -6,3 +6,14 @@ body {
 a {
   color: #00B7FF;
 }
+
+.animalAttr {
+  background-color:burlywood;
+  width: 300px;
+  font-family: 'Courier New', Courier, monospace;
+  margin: 20px;
+  padding: 20px;
+  color:darkred;
+  border: 2px solid black;
+  }
+  

@@ -1,0 +1,24 @@
+extends layout
+
+block content
+    h1= title
+    if (toShow == null)
+        h2 No instance to detail
+    else
+        - let animalid = toShow._id
+        - let animal_Name  = toShow.animal_Name
+        - let animal_breed = toShow.animal_breed
+        - let animal_cost  = toShow.animal_cost
+        div
+            div.row
+                div(class='animalAttr mr-3') Animal ID is:
+                div #{animalid}
+            div.row
+                div(class='animalAttr mr-3') animal Type is:
+                div #{animal_Name}
+            div.row
+                div(class='animalAttr mr-3') animal Size is:
+                div #{animal_breed}
+            div.row
+                div(class='animalAttr mr-3') animal Cost is:
+                div #{animal_cost}

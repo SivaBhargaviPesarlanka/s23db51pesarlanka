@@ -1,20 +1,19 @@
 extends layout
 
 block content
-  -
-   let animal = results
   h1= title
-  .container-fluid 
-    .row 
-    
-      each anima in results
-        div(class="col-sm-2" style=`border:solid 2px black` onclick=`buy(${animal.indexOf(anima)})`) 
-            p animal_Name : #{anima.animal_Name}
-            p animal_breed : #{anima.animal_breed}
-            p animal_cost : #{anima.animal_cost}
-  
+  -let items = results
+  div(class="container-fluid")
+    div(class="row m-1")
+      each item in items
+        - let destination = `dispatch(\"/animal/update?id=${item._id}\")`
+        div(class="row-sm-2", class="m-1") Item #{item.animal_Name}(#{item.animal_breed}) is #{item.animal_cost}
+          button.btn( class="btn-primary ml-1", onclick= destination) Update
+
   script.
-    function buy(index) {
-        alert("You Purchased item "+(index+1))
+    function dispatch(path){
+      window.location.href=path
     }
+
+
   

@@ -22,7 +22,7 @@ block content
                 input#size(type='text', name='animal_breed', value= animal_breed )
             div.form-group
                 label.animalAttr(for='animal_cost') animal cost
-                input#cost(type='number', name='animal_cost', value= animal_cost )
+                input#cost(type='number', name='animal_cost', value= animal_cost, min =10, max  = 1000  )
             input(type="submit")
         script.
             document.forms['animalForm'].addEventListener('submit', (event) => {
